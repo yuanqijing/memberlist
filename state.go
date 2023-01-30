@@ -42,8 +42,8 @@ type Node struct {
 	Name  string
 	Addr  net.IP
 	Port  uint16
-	Meta  []byte        // Metadata from the delegate for this node.
-	State NodeStateType // State of the node.
+	Meta  []byte        `json:"-"` // Metadata from the delegate for this node.
+	State NodeStateType `json:"-"` // State of the node.
 	PMin  uint8         // Minimum protocol version this understands
 	PMax  uint8         // Maximum protocol version this understands
 	PCur  uint8         // Current version node is speaking
